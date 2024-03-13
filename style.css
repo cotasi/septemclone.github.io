@@ -1,0 +1,251 @@
+/* 공통 클래스 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.d-none {
+    display: none !important;
+}
+.sr-only {
+    position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	border: 0;
+	clip: rect(0 0 0 0);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.containers {
+    max-width: 800px; 
+    margin: 0 auto;
+}
+/* 인트로 페이지 */
+#wrap {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: url('http://septem-magazine.com/wp-content/uploads/2023/07/Intro.png') no-repeat center/cover;
+}
+
+
+header {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1.logo a svg {
+    max-width: 140px;
+}
+
+header h1.logo {
+    margin: 0;
+}
+
+header h1.logo a { 
+    display: flex;
+    align-items: center;
+}
+
+header h1.logo a svg path {
+    fill: #fff;
+}
+
+header .menubtn button i {
+    color: #fff;
+}
+
+header .menubtn button i::before {
+    font-size: 45px;
+}
+
+main {
+    position: relative;
+    height: calc(100vh - 150px);
+}
+
+main .wrapper {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+main .wrapper .biglogo svg path {
+    fill: #fff;
+}
+
+main .wrapper p {
+    color: #fff;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-size: 28px;
+}
+
+main .wrapper button {
+    color: #fff;
+    font-size: 33px;
+}
+
+main .wrapper button span {
+    margin-right: 25px;
+}
+
+main .wrapper button i {
+    padding: 11px 12px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+.hiddenbtn {
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: #000;
+    padding-top: 50px;
+    z-index: 10;
+    transform: translateY(-100%);
+    transition: all .4s;
+}
+
+.hiddenbtn.down {
+    transform: translateY(0);
+}
+
+.hiddenbtn .high {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 250px;
+}
+
+.hiddenbtn .containers {
+    position: relative;
+}
+
+.hiddenbtn .containers > div:last-of-type {
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+}
+
+.hiddenbtn .containers > div:last-of-type a {
+    color: #fff;
+}
+
+.hiddenbtn ul li span {
+    color: #fff;
+    margin-right: 150px;
+    color: rgba(255,255,255,.4);
+    position: relative;
+}
+
+.hiddenbtn ul li span:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.4);
+    right: -10px;
+    top: -10px;
+}
+
+.hiddenbtn ul li a {
+    color: rgba(255,255,255,.4);
+    font-size: 80px;
+}
+
+.hiddenbtn ul li:last-child a {
+    color: rgba(255,255,255,.1);
+    position: relative;
+}
+
+.hiddenbtn ul li:last-child a::after {
+    content: 'Comming Soon!';
+    display: block;
+    position: absolute;
+    font-size: 25px;
+    color: rgb(255,255,255);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@media (max-width: 770px) {
+    header {
+        height: 100px !important;
+    }
+
+    header > .logo a svg {
+        max-width: 90px !important;
+    }
+
+    header > .menubtn button i:before{
+        font-size: 30px !important;
+    }
+
+    main .wrapper {
+        padding-left: 10px;
+    }
+
+    .biglogo img {
+        max-width: 180px;
+    }
+
+    main .wrapper p { 
+        padding-top: 5px !important;
+        font-size: 20px;
+        padding-bottom: 400px !important;
+    }
+
+    .hiddenbtn {
+        padding-top: 10px;
+        padding-left: 25px;
+    }
+
+    .hiddenbtn .logo a svg {
+        max-width: 90px !important;
+    }
+
+    .hiddenbtn .menubtn button i:before {
+        font-size: 25px;
+    }
+
+    .hiddenbtn .high {
+        margin-bottom: 50px;
+    }
+
+    .hiddenbtn ul li span { margin-right: 15px; }
+
+    .hiddenbtn ul li {
+        margin-bottom: 20px;
+    }
+
+    .hiddenbtn ul li a {
+        font-size: 45px;
+    }
+}
